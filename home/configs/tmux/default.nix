@@ -1,27 +1,20 @@
 { pkgs, theme, ... }:
 let
   inherit (theme) colors;
-  tokyo-night = pkgs.tmuxPlugins.mkTmuxPlugin {
-    pluginName = "tokyo-night";
-    version = "unstable-2023-01-06";
-    src = pkgs.fetchFromGitHub {
-      owner = "janoamaral";
-      repo = "tokyo-night-tmux";
-      rev = "master";
-      sha256 = "sha256-k4CbfWdyk7m/T97ytxLOEMUKrkU5iJSIu3lvyT1B1jU=";
-    };
-    postInstall = # sh
-      ''
-        grep -lr "#1A1B26" $target | xargs sed -i -e "s/#1A1B26/${colors.bg}/"
-        grep -lr "#2A2F41" $target | xargs sed -i -e "s/#2A2F41/${colors.bg_highlight}/"
-      '';
-  };
+  env = "env TERM=xterm-256color";
+  reset = "#[fg=${colors.bar.fg},bg=${colors.bar.bg_dark},nobold,noitalics,nounderscore,nodim]";
 in
 {
+  home.shellAliases = {
+    tmux = "${env} tmux";
+    tmux-sessionizer = "${env} tmux-sessionizer";
+  };
+
   programs.tmux = {
     enable = true;
 
     prefix = "C-a";
+    terminal = "xterm-256color";
     mouse = true;
     resizeAmount = 10;
     keyMode = "vi";
@@ -30,24 +23,12 @@ in
     escapeTime = 0;
     historyLimit = 50000;
 
-    plugins = with pkgs.tmuxPlugins; [ tokyo-night ];
-
     extraConfig = # tmux
       ''
-        set -g default-terminal "xterm-256color"
         set -a terminal-features 'xterm-256color:RGB'
-
-        # Enable mouse mode.
-        set -g mouse on
 
         # Renumber windows when a window is closed.
         set -g renumber-windows on
-
-        # Configure theme.
-        set -g @tokyo-night-tmux_show_wbg 0
-        set -g @tokyo-night-tmux_show_git 0
-        set -g @tokyo-night-tmux_window_id_style hsquare
-        run-shell ${tokyo-night}/share/tmux-plugins/tokyo-night/tokyo-night.tmux
 
         # Better copy-mode bindings.
         bind v copy-mode
@@ -93,15 +74,46 @@ in
         bind t run-shell "tmux-sessionizer /tmp"
         bind h run-shell "tmux-sessionizer ~"
         bind g run-shell "tmux-sessionizer ~/todo.md"
+
+        # Statusbar.
+        window_number="#(${./numbers.sh} #I)"
+        pane_numbers="#(${./numbers.sh} #P)"
+
+        set -g window-status-separator ""
+        set -g status-left-length 80
+        set -g status-right-length 150
+
+        set -g mode-style "fg=${colors.turquoise},bg=${colors.black}"
+
+        set -g message-style "bg=${colors.blue},fg=${colors.bg}"
+        set -g message-command-style "fg=${colors.white},bg=${colors.black}"
+
+        set -g pane-border-style "fg=${colors.black}"
+        set -g pane-active-border-style "fg=${colors.accent}"
+        set -g pane-border-status off
+
+        set -g status-style bg="${colors.bar.bg_dark}"
+
+        set -g status-left "\
+        #[fg=${colors.bar.bg_light},bg=${colors.accent},bold] #{?client_prefix,󰠠 ,#[dim]󰤂 }\
+        #[bold,nodim]#S \
+        "
+
+        set -g window-status-current-format "${reset}\
+        #[fg=${colors.turquoise},bg=${colors.bar.bg_light}] #{?#{==:#{pane_current_command},ssh},󰣀 , }\
+        #[fg=${colors.bar.fg},bold,nodim]$window_number#W\
+        #[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} \
+        "
+
+        set -g window-status-format "${reset}\
+        #[fg=${colors.bar.fg}] #{?#{==:#{pane_current_command},ssh},󰣀 , }\
+        ${reset}$window_number#W \
+        #[nobold,dim]$pane_numbers\
+        #[fg=${colors.yellow}]#{?window_last_flag,󰁯 ,} "
+
+        set -g status-right "\
+        #[bg=${colors.bar.bg_light}] %Y-%m-%d । %H:%M \
+        "
       '';
   };
-
-  home.shellAliases =
-    let
-      env = "env TERM=xterm-256color";
-    in
-    {
-      tmux = "${env} tmux";
-      tmux-sessionizer = "${env} tmux-sessionizer";
-    };
 }

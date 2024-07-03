@@ -4,7 +4,7 @@ local tsj = require("treesj")
 
 configs.setup({
   highlight = {
-    enable = true,
+    enable = false,
   },
 
   indent = {

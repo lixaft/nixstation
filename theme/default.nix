@@ -1,6 +1,25 @@
 {
   wallpaper = ./wall.png;
 
+  # scheme: "Tokyonight"
+  # author: "Folke Lemaitre (https://github.com/folke)"
+  # base00: "#24283b"
+  # base01: "#1f2335"
+  # base02: "#292e42"
+  # base03: "#565f89"
+  # base04: "#a9b1d6"
+  # base05: "#c0caf5"
+  # base06: "#c0caf5"
+  # base07: "#c0caf5"
+  # base08: "#f7768e"
+  # base09: "#ff9e64"
+  # base0A: "#e0af68"
+  # base0B: "#9ece6a"
+  # base0C: "#1abc9c"
+  # base0D: "#41a6b5"
+  # base0E: "#bb9af7"
+  # base0F: "#ff007c"
+
   colors = rec {
     # Colors.
     black = "#15161e";
@@ -13,8 +32,12 @@
     purple = "#9d7cd8";
     red = "#f7768e";
     teal = "#1abc9c";
-    white = "";
+    turquoise = "#73daca";
+    white = "#c0caf5";
     yellow = "#e0af68";
+
+
+    # teal = "#1abc9c";
 
     # Extras Colors.
     blue0 = "#3d59a1";
@@ -25,7 +48,7 @@
     blue7 = "#394b70";
     dark3 = "#545c7e";
     dark5 = "#737aa2";
-    green1 = "#73daca";
+    green1 = turquoise;
     green2 = "#41a6b5";
     magenta2 = "#ff007c";
     red1 = "#db4b4b";
@@ -90,10 +113,10 @@
     # bg_dark = "#1f2335";
     # bg = "#08080C";
     # bg_highlight = "#111118";
-    # terminal_black = "#414868";
+    terminal_black = "#414868";
     # fg = "#c0caf5";
-    # fg_dark = "#a9b1d6";
-    # fg_gutter = "#3b4261";
+    fg_dark = "#a9b1d6";
+    fg_gutter = "#3b4261";
     # dark3 = "#545c7e";
     # comment = "#565f89";
     # dark5 = "#737aa2";

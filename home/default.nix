@@ -100,9 +100,9 @@ in
       filebot
       flameshot
       geeqie
-      gnome.eog
-      gnome.nautilus
-      gnome.sushi
+      eog
+      nautilus
+      sushi
       google-chrome
       gpick
       iaito

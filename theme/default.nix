@@ -22,6 +22,7 @@
 
   colors = rec {
     # Colors.
+    aquamarine = "#73daca";
     black = "#15161e";
     blue = "#7aa2f7";
     cyan = "#7dcfff";
@@ -31,11 +32,11 @@
     orange = "#ff9e64";
     purple = "#9d7cd8";
     red = "#f7768e";
+    # skyblue = "#89ddff";
     teal = "#1abc9c";
-    turquoise = "#73daca";
+    turquoise = "#2ac3de";
     white = "#c0caf5";
     yellow = "#e0af68";
-
 
     # teal = "#1abc9c";
 

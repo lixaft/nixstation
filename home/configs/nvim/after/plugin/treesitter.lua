@@ -1,10 +1,11 @@
 local configs = require("nvim-treesitter.configs")
 local context = require("treesitter-context")
 local tsj = require("treesj")
+local c = require("theme").colors
 
 configs.setup({
   highlight = {
-    enable = false,
+    enable = true,
   },
 
   indent = {
@@ -87,3 +88,28 @@ tsj.setup({
 
 vim.keymap.set("n", "gC", context.go_to_context)
 vim.keymap.set("n", "gj", tsj.toggle)
+
+vim.api.nvim_set_hl(0, "@attribute", { link = "PreProc" })
+vim.api.nvim_set_hl(0, "@attribute.builtin", { link = "PreProc" })
+vim.api.nvim_set_hl(0, "@constant", { link = "Constant" })
+vim.api.nvim_set_hl(0, "@constructor", { fg = c.magenta })
+vim.api.nvim_set_hl(0, "@function", { link = "Function" })
+vim.api.nvim_set_hl(0, "@keyword", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@keyword.import", { link = "PreProc" })
+vim.api.nvim_set_hl(0, "@keyword.operator", { link = "Operator" })
+vim.api.nvim_set_hl(0, "@markup", {})
+vim.api.nvim_set_hl(0, "@module", { link = "Include" })
+vim.api.nvim_set_hl(0, "@namespace.builtin", { fg = c.aquamarine })
+vim.api.nvim_set_hl(0, "@property", { fg = c.aquamarine })
+vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = c.gray })
+vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = c.cyan })
+vim.api.nvim_set_hl(0, "@punctuation.special", { fg = c.cyan })
+vim.api.nvim_set_hl(0, "@string", { link = "String" })
+vim.api.nvim_set_hl(0, "@string.documentation", { link = "Comment" })
+vim.api.nvim_set_hl(0, "@variable", { fg = c.fg })
+vim.api.nvim_set_hl(0, "@variable.builtin", { fg = c.red })
+vim.api.nvim_set_hl(0, "@variable.member", { fg = c.aquamarine })
+vim.api.nvim_set_hl(0, "@variable.parameter", { fg = c.yellow })
+
+vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })
+vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "@module" })

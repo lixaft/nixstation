@@ -83,7 +83,7 @@ in
         set -g status-left-length 80
         set -g status-right-length 150
 
-        set -g mode-style "fg=${colors.turquoise},bg=${colors.black}"
+        set -g mode-style "fg=${colors.aquamarine},bg=${colors.black}"
 
         set -g message-style "bg=${colors.blue},fg=${colors.bg}"
         set -g message-command-style "fg=${colors.white},bg=${colors.black}"
@@ -100,7 +100,7 @@ in
         "
 
         set -g window-status-current-format "${reset}\
-        #[fg=${colors.turquoise},bg=${colors.bar.bg_light}] #{?#{==:#{pane_current_command},ssh},󰣀 , }\
+        #[fg=${colors.aquamarine},bg=${colors.bar.bg_light}] #{?#{==:#{pane_current_command},ssh},󰣀 , }\
         #[fg=${colors.bar.fg},bold,nodim]$window_number#W\
         #[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} \
         "

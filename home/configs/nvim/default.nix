@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  config,
   theme,
   ...
 }:
@@ -35,7 +35,7 @@ in
       lua-language-server
       nodePackages.typescript-language-server
       pyright
-      ruff-lsp
+      ruff
       rust-analyzer
       typos-lsp
       zls
@@ -43,7 +43,6 @@ in
       # Formatter & Linters.
       mypy
       nodePackages.prettier
-      ruff
       selene
       shfmt
       stylua

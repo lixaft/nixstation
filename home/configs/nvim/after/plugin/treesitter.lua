@@ -113,3 +113,6 @@ vim.api.nvim_set_hl(0, "@variable.parameter", { fg = c.yellow })
 
 vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "@module" })
+
+vim.api.nvim_set_hl(0, "TreesitterContext", {})
+vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { link = "LineNr" })

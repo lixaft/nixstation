@@ -69,7 +69,6 @@ in
       lspkind-nvim
       lualine-nvim
       luasnip
-      markdown-preview-nvim
       neodev-nvim
       none-ls-nvim
       nvim-cmp

@@ -13,7 +13,6 @@
     orange = "#ff9e64";
     purple = "#9d7cd8";
     red = "#f7768e";
-    # skyblue = "#89ddff";
     teal = "#1abc9c";
     turquoise = "#2ac3de";
     white = "#c0caf5";

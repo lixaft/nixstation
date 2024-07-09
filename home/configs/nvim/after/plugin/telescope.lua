@@ -53,4 +53,6 @@ vim.api.nvim_create_user_command("Reg", builtin.registers, {})
 
 vim.api.nvim_set_hl(0, "TelescopeBorder", { link = "FloatBorder" })
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = c.orange })
+vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { fg = c.orange })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = c.orange, bold = true })
+vim.api.nvim_set_hl(0, "TelescopeTitle", { bold = true })

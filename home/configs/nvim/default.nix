@@ -59,6 +59,7 @@ in
     withRuby = true;
 
     plugins = with pkgs.vimPlugins; [
+      cloak-nvim
       cmp-buffer
       cmp-nvim-lsp
       cmp-path

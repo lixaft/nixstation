@@ -56,7 +56,7 @@ lualine.setup({
 
   tabline = {
     lualine_a = {
-      { [1] = "tabs", mode = 2 },
+      { [1] = "tabs", mode = 2, max_length = vim.o.columns },
       {
         -- HACK: The tabline options will force set the `showtabline` option to 2
         --       (which always display the tab bar). We want to restore the

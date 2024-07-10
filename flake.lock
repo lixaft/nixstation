@@ -55,7 +55,27 @@
         "type": "github"
       }
     },
-    "nixos-wsl": {
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1720599442,
+        "narHash": "sha256-jdm+sKVbBXoyrxcHbVaV0htlpq2iFR+eJw3Xe/DPcDo=",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "cf297a8d248db6a455b60133f6c0029c04ebe50e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nix-wsl": {
       "inputs": {
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
@@ -64,11 +84,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1720188460,
-        "narHash": "sha256-ydD3UPIPlOkEDStwNxzGwFhAi5vGcobn2EofOmUvKDA=",
+        "lastModified": 1720428387,
+        "narHash": "sha256-0vHxVNWTql555MZLb2kngrcjfNtsJKoYdyUivTibgnc=",
         "owner": "nix-community",
         "repo": "NixOS-WSL",
-        "rev": "7051b909b9b5e74f19791795bd769de12c5acb3d",
+        "rev": "30ebd0beb2ed26e09bcd245d757504029f807cce",
         "type": "github"
       },
       "original": {
@@ -96,7 +116,8 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixos-wsl": "nixos-wsl",
+        "nix-darwin": "nix-darwin",
+        "nix-wsl": "nix-wsl",
         "nixpkgs": "nixpkgs"
       }
     },

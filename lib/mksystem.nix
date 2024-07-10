@@ -1,6 +1,7 @@
 {
   nixpkgs,
-  nixos-wsl,
+  nix-wsl,
+  nix-darwin,
   home-manager,
   ...
 }@inputs:
@@ -10,9 +11,12 @@
   user,
   home ? false,
   wsl ? false,
+  darwin ? false,
   stateVersion,
 }@systemInputs:
 let
+  systemFunc = if darwin then inputs.nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
+
   specialArgs = rec {
     inputs = inputs;
     system = systemInputs;
@@ -21,7 +25,7 @@ let
   };
   overlays = [ ];
 
-  wslModule = nixos-wsl.nixosModules.wsl;
+  wslModule = nix-wsl.nixosModules.wsl;
   homeModule = home-manager.nixosModules.home-manager;
 
   homeConfig = {
@@ -34,7 +38,7 @@ let
     };
   };
 in
-nixpkgs.lib.nixosSystem {
+systemFunc {
   inherit system;
   modules = [
     { config._module.args = specialArgs; }

@@ -26,7 +26,7 @@ vim.api.nvim_set_hl(0, "TabLine", { bg = c.bar.bg_light, fg = c.bar.fg })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = c.bar.bg_dark })
 vim.api.nvim_set_hl(0, "TabLineSel", { fg = c.bar.bg_light, bg = c.accent })
 vim.api.nvim_set_hl(0, "Title", { fg = c.blue, bold = true })
-vim.api.nvim_set_hl(0, "Visual", { bg = color.darken(c.comment, 0.7) })
+vim.api.nvim_set_hl(0, "Visual", { bg = color.darken(c.comment, 0.8) })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.black })
 
 vim.api.nvim_set_hl(0, "diffAdded", { fg = c.git.add })

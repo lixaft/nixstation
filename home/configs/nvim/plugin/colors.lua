@@ -67,44 +67,22 @@ vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.border, bold = true })
 vim.api.nvim_set_hl(0, "lCursor", { fg = c.bg, bg = c.fg })
 
 -- Syntax.
-vim.api.nvim_set_hl(0, "Comment", { fg = c.comment})
-
+vim.api.nvim_set_hl(0, "Character", { fg = c.green })
+vim.api.nvim_set_hl(0, "Comment", { fg = c.comment })
 vim.api.nvim_set_hl(0, "Constant", { fg = c.orange })
-vim.api.nvim_set_hl(0, "String", { fg = c.green })
-vim.api.nvim_set_hl(0, "Character", { link = "String" })
--- vim.api.nvim_set_hl(0, "Number", { link = "Constant" })
--- vim.api.nvim_set_hl(0, "Boolean", { link = "Constant" })
--- vim.api.nvim_set_hl(0, "Float", { link = "Constant" })
-
-vim.api.nvim_set_hl(0, "Identifier", { fg = "#ff0000" })
+vim.api.nvim_set_hl(0, "Delimiter", { fg = c.turquoise })
 vim.api.nvim_set_hl(0, "Function", { fg = c.blue })
---
-vim.api.nvim_set_hl(0, "Statement", { fg = c.magenta })
--- vim.api.nvim_set_hl(0, "Conditional", { link = "Statement" })
--- vim.api.nvim_set_hl(0, "Repeat", { link = "Statement" })
--- vim.api.nvim_set_hl(0, "Label", { link = "Statement" })
+vim.api.nvim_set_hl(0, "Identifier", { fg = c.turquoise })
 vim.api.nvim_set_hl(0, "Operator", { fg = c.cyan })
--- vim.api.nvim_set_hl(0, "Keyword", { link = "Statement" })
--- vim.api.nvim_set_hl(0, "Exception", { link = "Statement" })
---
 vim.api.nvim_set_hl(0, "PreProc", { fg = c.cyan })
--- vim.api.nvim_set_hl(0
--- vim.api.nvim_set_hl(0, "Define", { link = "PreProc" })
--- vim.api.nvim_set_hl(0, "Macro", { link = "PreProc" })
--- vim.api.nvim_set_hl(0, "PreCondit", { link = "PreProc" })
---
-vim.api.nvim_set_hl(0, "Type", { fg = c.turquoise })
--- vim.api.nvim_set_hl(0, "StorageClass", { link = "Type" })
--- vim.api.nvim_set_hl(0, "Structure", { link = "Type" })
--- vim.api.nvim_set_hl(0, "Typedef", { link = "Type" })
---
 vim.api.nvim_set_hl(0, "Special", { fg = c.turquoise })
--- vim.api.nvim_set_hl(0, "SpecialChar", { link = "Special" })
--- vim.api.nvim_set_hl(0, "Tag", { link = "Special" })
-vim.api.nvim_set_hl(0, "Delimiter", { link = "Special" })
--- vim.api.nvim_set_hl(0, "SpecialComment", { link = "Special" })
--- vim.api.nvim_set_hl(0, "Debug", { link = "Special" })
+vim.api.nvim_set_hl(0, "Statement", { fg = c.magenta })
+vim.api.nvim_set_hl(0, "String", { fg = c.green })
+vim.api.nvim_set_hl(0, "Type", { fg = c.turquoise })
 --
 vim.api.nvim_set_hl(0, "Error", { fg = c.red })
 vim.api.nvim_set_hl(0, "Todo", { fg = c.blue, bold = true })
 vim.api.nvim_set_hl(0, "Underlined", { underline = true })
+
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = c.red })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = c.yellow })

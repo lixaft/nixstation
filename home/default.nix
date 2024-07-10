@@ -41,86 +41,79 @@ in
     };
 
     packages = with pkgs; [
-      # Cli.
       act
+      alacritty
+      bazecor
       bc
+      black
+      # TODO: With the python upgrade to 3.12, blender is currently broken.
+      # due to some python packages not building.
+      # blender
+      brave
       btop
+      cargo
       cloc
       cmake
       curl
+      discord
       distrobox
+      eog
       fd
+      feh
       ffmpeg
+      filebot
+      flameshot
+      gcc
+      geeqie
       gh
       gnumake
+      go
+      google-chrome
+      gpick
       graphviz
+      iaito
       jq
       just
       killall
       less
-      parallel
-      rename
-      ripgrep
-      tlrc
-      tree
-      xdg-utils
-
-      # Development.
-      black
-      cargo
-      gcc
-      go
       luajit
       mypy
+      nautilus
+      nerdfonts
       nixfmt-rfc-style
       nodePackages.prettier
       nodejs
+      parallel
+      pavucontrol
+      peek
+      playerctl
+      protonvpn-gui
+      pypy
       python3
+      qbittorrent
+      rename
+      ripgrep
       ruff
       selene
+      spotify
       stylua
+      sushi
+      tlrc
+      tree
       twine
       typos
       uv
-      zig
-
-      # Desktop.
-      playerctl
-
-      # X Desktop.
-      feh
       xclip
-
-      # Applications.
-      alacritty
-      bazecor
-      blender
-      brave
-      discord
-      filebot
-      flameshot
-      geeqie
-      eog
-      nautilus
-      sushi
-      google-chrome
-      gpick
-      iaito
-      pavucontrol
-      peek
-      protonvpn-gui
-      qbittorrent
-      spotify
-
-      # Fonts.
-      nerdfonts
+      xdg-utils
+      zig
     ];
   };
 
   programs = {
     bash.enable = true;
     home-manager.enable = true;
-    thefuck.enable = true;
+    # TODO: With the python upgrade to 3.12, thefuck is currently broken.
+    # thefuck.enable = true;
     zoxide.enable = true;
   };
 

@@ -15,13 +15,12 @@
   stateVersion,
 }@systemInputs:
 let
-  systemFunc = if darwin then inputs.nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
+  systemFunc = if darwin then nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
 
   specialArgs = rec {
     inputs = inputs;
     system = systemInputs;
     theme = import ../theme;
-    colors = theme.colors;
   };
   overlays = [ ];
 

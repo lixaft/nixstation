@@ -111,7 +111,12 @@ vim.api.nvim_set_hl(0, "@variable", { fg = c.fg })
 vim.api.nvim_set_hl(0, "@variable.builtin", { fg = c.red })
 vim.api.nvim_set_hl(0, "@variable.member", { fg = c.aquamarine })
 vim.api.nvim_set_hl(0, "@variable.parameter", { fg = c.yellow })
+vim.api.nvim_set_hl(0, "@comment.error", { fg = c.red, bold = true })
+vim.api.nvim_set_hl(0, "@comment.todo", { fg = c.blue, bold = true })
+vim.api.nvim_set_hl(0, "@comment.warning", { fg = c.yellow, bold = true })
+vim.api.nvim_set_hl(0, "@comment.note", { fg = c.aquamarine, bold = true })
 
+-- Semantic tokens.
 vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "@module" })
 

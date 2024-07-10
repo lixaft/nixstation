@@ -9,13 +9,12 @@
     extraConfig = {
       advice.statusHints = false;
       color.ui = true;
-      core.editor = "nvim";
       core.symlinks = true;
       fetch.prune = true;
       grep.extendedRegexp = true;
       init.defaultBranch = "main";
+      merge.tool = "nvimdiff";
       pull.rebase = true;
-
       safe.directory = "*";
     };
 

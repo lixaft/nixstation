@@ -53,4 +53,24 @@ lualine.setup({
       "location",
     },
   },
+
+  tabline = {
+    lualine_a = {
+      { [1] = "tabs", mode = 2 },
+      {
+        -- HACK: The tabline options will force set the `showtabline` option to 2
+        --       (which always display the tab bar). We want to restore the
+        --       default behavior here.
+        function()
+          vim.o.showtabline = 1
+          return ""
+        end,
+      },
+    },
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
+  },
 })

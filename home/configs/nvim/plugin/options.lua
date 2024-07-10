@@ -1,4 +1,3 @@
-
 vim.opt.termguicolors = true
 
 -- Turn that damn bell off...
@@ -32,6 +31,9 @@ vim.opt.showbreak = "> "
 -- Split.
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- -- Tab.
+-- vim.opt.tabline = "test"
 
 -- Backup.
 vim.opt.swapfile = true

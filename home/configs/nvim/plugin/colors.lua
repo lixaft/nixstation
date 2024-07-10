@@ -22,6 +22,7 @@ vim.api.nvim_set_hl(0, "TabLine", { bg = c.bar.bg_light, fg = c.bar.fg })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = c.bar.bg_dark })
 vim.api.nvim_set_hl(0, "TabLineSel", { fg = c.bar.bg_light, bg = c.accent })
 vim.api.nvim_set_hl(0, "Visual", { bg = color.darken(c.comment, 0.7) })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.black })
 
 vim.api.nvim_set_hl(0, "diffNewFile", { fg = c.orange })
 vim.api.nvim_set_hl(0, "diffOldFile", { fg = c.yellow })
@@ -61,7 +62,6 @@ vim.api.nvim_set_hl(0, "diffRemoved", { fg = c.git.delete })
 -- vim.api.nvim_set_hl(0, "WildMenu", { bg = c.bg_visual })
 -- vim.api.nvim_set_hl(0, "WinBar", { link = "StatusLine" })
 -- vim.api.nvim_set_hl(0, "WinBarNC", { link = "StatusLineNC" })
--- vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.border, bold = true })
 -- vim.api.nvim_set_hl(0, "lCursor", { fg = c.bg, bg = c.fg })
 
 -- Syntax.

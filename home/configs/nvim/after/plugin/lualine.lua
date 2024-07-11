@@ -56,6 +56,11 @@ lualine.setup({
 
   tabline = {
     lualine_a = {
+      function()
+        return "󰈸"
+      end,
+    },
+    lualine_b = {
       { [1] = "tabs", mode = 2, max_length = vim.o.columns },
       {
         -- HACK: The tabline options will force set the `showtabline` option to 2
@@ -67,7 +72,7 @@ lualine.setup({
         end,
       },
     },
-    lualine_b = {},
+    -- lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},

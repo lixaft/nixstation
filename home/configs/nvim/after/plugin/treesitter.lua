@@ -89,6 +89,11 @@ tsj.setup({
 vim.keymap.set("n", "gC", context.go_to_context)
 vim.keymap.set("n", "gj", tsj.toggle)
 
+-- UI.
+vim.api.nvim_set_hl(0, "TreesitterContext", {})
+vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { link = "LineNr" })
+
+-- Syntax.
 vim.api.nvim_set_hl(0, "@attribute", { link = "PreProc" })
 vim.api.nvim_set_hl(0, "@attribute.builtin", { link = "PreProc" })
 vim.api.nvim_set_hl(0, "@constant", { link = "Constant" })
@@ -106,6 +111,7 @@ vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = c.gray })
 vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = c.cyan })
 vim.api.nvim_set_hl(0, "@punctuation.special", { fg = c.cyan })
 vim.api.nvim_set_hl(0, "@string", { link = "String" })
+vim.api.nvim_set_hl(0, "@string.escape", { fg = c.magenta })
 vim.api.nvim_set_hl(0, "@string.documentation", { link = "Comment" })
 vim.api.nvim_set_hl(0, "@variable", { fg = c.fg })
 vim.api.nvim_set_hl(0, "@variable.builtin", { fg = c.red })
@@ -117,8 +123,6 @@ vim.api.nvim_set_hl(0, "@comment.warning", { fg = c.yellow, bold = true })
 vim.api.nvim_set_hl(0, "@comment.note", { fg = c.aquamarine, bold = true })
 
 -- Semantic tokens.
-vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })
+vim.api.nvim_set_hl(0, "@lsp.mod.defaultLibrary", { fg = c.turquoise })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "@module" })
-
-vim.api.nvim_set_hl(0, "TreesitterContext", {})
-vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { link = "LineNr" })
+vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })

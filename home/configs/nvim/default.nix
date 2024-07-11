@@ -28,13 +28,12 @@ in
       tree-sitter
 
       # LSP.
-      basedpyright
       bash-language-server
       cmake-language-server
       gopls
       lua-language-server
       nodePackages.typescript-language-server
-      pyright
+      python3Packages.jedi-language-server
       ruff
       rust-analyzer
       typos-lsp

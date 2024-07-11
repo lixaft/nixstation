@@ -67,19 +67,9 @@ end
 
 require("neodev").setup()
 
-lspconfig.pyright.setup({
+lspconfig.jedi_language_server.setup({
   capabilities = build_capabilities(),
   on_attach = on_attach,
-  settings = {
-    pyright = {
-      disableOrganizeImports = true,
-    },
-    python = {
-      analysis = {
-        ignore = { "*" },
-      },
-    },
-  },
 })
 lspconfig.ruff.setup({
   capabilities = build_capabilities({

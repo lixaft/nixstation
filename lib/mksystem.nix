@@ -15,7 +15,7 @@
   stateVersion,
 }@systemInputs:
 let
-  systemFunc = if darwin then nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
+  systemFn = if darwin then nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
 
   specialArgs = rec {
     inputs = inputs;
@@ -37,7 +37,7 @@ let
     };
   };
 in
-systemFunc {
+systemFn {
   inherit system;
   modules = [
     { config._module.args = specialArgs; }

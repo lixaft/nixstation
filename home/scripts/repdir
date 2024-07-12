@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 _TTY = sys.stdout.isatty()
 _CFG = (
     "-c",
-    f"color.ui={'always' if _TTY else 'never'}",
+    f"color.ui={"always" if _TTY else "never"}",
 )
 
 _lock = Lock()

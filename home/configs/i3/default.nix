@@ -83,8 +83,7 @@ in
         # Applications.
         "${mod}+d" = ''exec --no-startup-id i3-dmenu-desktop --dmenu "dmenu -i -fn 'DejaVuSansM Nerd Font:pixelsize=16'"'';
         "${mod}+Return" = "exec --no-startup-id alacritty";
-        "${mod}+Shift+b" = "exec --no-startup-id nitrogen";
-        "${mod}+b" = "exec --no-startup-id nitrogen --set-zoom-fill --random";
+        "${mod}+e" = ''exec --no-startup-id nautilus'';
         "${mod}+p" = "exec --no-startup-id gpick --pick --single --output --no-newline | xclip -sel clip && true";
         "Print" = "exec --no-startup-id flameshot gui";
         "Shift+Print" = "exec --no-startup-id peek";

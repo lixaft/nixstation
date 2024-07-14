@@ -54,5 +54,15 @@
           stateVersion = "23.11";
         };
       };
+      darwinConfigurations = {
+        "apple" = mkSystem {
+          system = "x86_64-darwin";
+          host = "apple";
+          user = "lixaft";
+          home = false;
+          darwin = true;
+          stateVersion = "23.11";
+        };
+      };
     };
 }

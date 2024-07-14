@@ -58,5 +58,6 @@
   users.users.${system.user}.extraGroups = [
     "libvirtd"
     "podman"
+    "wheel"
   ];
 }

@@ -67,7 +67,7 @@ end
 
 require("neodev").setup()
 
-lspconfig.jedi_language_server.setup({
+lspconfig.pyright.setup({
   capabilities = build_capabilities(),
   on_attach = on_attach,
 })

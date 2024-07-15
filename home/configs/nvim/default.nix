@@ -33,6 +33,7 @@ in
       gopls
       lua-language-server
       nodePackages.typescript-language-server
+      pyright
       python3Packages.jedi-language-server
       ruff
       rust-analyzer

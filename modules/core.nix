@@ -51,12 +51,19 @@
 
   programs = {
     virt-manager.enable = true;
+    fish.enable = true;
   };
 
   environment.systemPackages = with pkgs; [ virtiofsd ];
 
-  users.users.${system.user}.extraGroups = [
-    "libvirtd"
-    "podman"
-  ];
+  users.users.${system.user} = {
+    isNormalUser = true;
+    description = "${system.user}";
+    extraGroups = [
+      "libvirtd"
+      "podman"
+      "wheel"
+    ];
+    shell = pkgs.fish;
+  };
 }

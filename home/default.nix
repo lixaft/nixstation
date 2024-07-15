@@ -86,8 +86,10 @@ in
       parallel
       pavucontrol
       peek
+      pkgs.file
       playerctl
       protonvpn-gui
+      pureref
       pypy
       python3
       qbittorrent
@@ -103,6 +105,7 @@ in
       twine
       typos
       uv
+      vcv-rack
       xclip
       xdg-utils
       zig

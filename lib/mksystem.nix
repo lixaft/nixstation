@@ -22,7 +22,6 @@ let
     system = systemInputs;
     theme = import ../theme;
   };
-  overlays = [ ];
 
   wslModule = nix-wsl.nixosModules.wsl;
   homeModule = home-manager.nixosModules.home-manager;
@@ -41,12 +40,10 @@ systemFn {
   inherit system;
   modules = [
     { config._module.args = specialArgs; }
-    { nixpkgs.overlays = overlays; }
 
     (if wsl then wslModule else { })
 
     ../hosts/${host}
-    ../users/${user}
 
     (if home then homeModule else { })
     (if home then homeConfig else { })

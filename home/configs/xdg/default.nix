@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
   xdg = {
     enable = true;
@@ -15,6 +15,21 @@
       music = "${config.home.homeDirectory}/musics";
       publicShare = "${config.home.homeDirectory}";
       templates = "${config.home.homeDirectory}";
+    };
+
+    desktopEntries = {
+      pureref = {
+        name = "PureRef";
+        exec = "${pkgs.pureref}/bin/pureref";
+        terminal = false;
+        categories = [ "Application" ];
+      };
+      filebot = {
+        name = "FileBot";
+        exec = "${pkgs.filebot}/bin/filebot";
+        terminal = false;
+        categories = [ "Application" ];
+      };
     };
   };
 }

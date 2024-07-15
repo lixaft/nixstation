@@ -124,6 +124,6 @@ vim.api.nvim_set_hl(0, "@variable.member", { fg = c.aquamarine })
 vim.api.nvim_set_hl(0, "@variable.parameter", { fg = c.yellow })
 
 -- Semantic tokens.
-vim.api.nvim_set_hl(0, "@lsp.mod.defaultLibrary", { fg = c.turquoise })
+vim.api.nvim_set_hl(0, "@lsp.mod.defaultLibrary", { fg = c.red }) -- lua: `vim`
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "@module" })
 vim.api.nvim_set_hl(0, "@lsp.type.property", { link = "@property" })

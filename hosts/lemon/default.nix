@@ -1,8 +1,8 @@
 { config, system, ... }:
 {
   imports = [
+    ../../modules/core.nix
     ../../modules/desktop.nix
-    ../../modules/workstation.nix
     ./hardware.nix
   ];
 

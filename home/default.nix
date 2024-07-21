@@ -46,9 +46,7 @@ in
       bazecor
       bc
       black
-      # TODO: With the python upgrade to 3.12, blender is currently broken.
-      # due to some python packages not building.
-      # blender
+      blender
       brave
       btop
       cargo
@@ -116,8 +114,7 @@ in
   programs = {
     bash.enable = true;
     home-manager.enable = true;
-    # TODO: With the python upgrade to 3.12, thefuck is currently broken.
-    # thefuck.enable = true;
+    thefuck.enable = true;
     zoxide.enable = true;
   };
 

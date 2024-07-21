@@ -21,7 +21,7 @@
   networking = {
     hostName = system.host;
     networkmanager.enable = true;
-    firewall.enable = true;
+    # firewall.enable = true;
   };
 
   services = {

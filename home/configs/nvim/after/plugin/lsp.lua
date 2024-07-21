@@ -69,7 +69,16 @@ require("neodev").setup()
 
 lspconfig.pyright.setup({
   capabilities = build_capabilities(),
-  on_attach = on_attach,
+  settings = {
+    pyright = {
+      disableOrganizeImports = true,
+    },
+    python = {
+      analysis = {
+        ignore = { "*" },
+      },
+    },
+  },
 })
 lspconfig.ruff.setup({
   capabilities = build_capabilities({

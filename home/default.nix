@@ -101,6 +101,7 @@ in
       stylua
       sushi
       tlrc
+      totem
       tree
       twine
       typos

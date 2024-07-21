@@ -1,4 +1,9 @@
-{ config, system, ... }:
+{
+  pkgs,
+  config,
+  system,
+  ...
+}:
 {
   imports = [
     ../../modules/core.nix
@@ -12,6 +17,15 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+
+  fileSystems = {
+    "/media" = {
+      device = "papaya:/volume1/Jellyfin";
+      fsType = "nfs";
+    };
+  };
+
+  environment.systemPackages = with pkgs; [ nfs-utils ];
 
   system.stateVersion = system.stateVersion;
 }

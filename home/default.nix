@@ -144,6 +144,7 @@ in
     ./configs/git
     ./configs/i3
     ./configs/lf
+    ./configs/litecli
     ./configs/nixpkgs
     ./configs/nvim
     ./configs/starship

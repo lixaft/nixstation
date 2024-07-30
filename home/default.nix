@@ -86,6 +86,7 @@ in
       peek
       pkgs.file
       playerctl
+      pre-commit
       protonvpn-gui
       pureref
       pypy

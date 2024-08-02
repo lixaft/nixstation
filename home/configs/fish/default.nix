@@ -40,7 +40,6 @@ in
         # Bindings.
         bind \ev "__editor_paginate";
         bind \cg "tmux-sessionizer ~/todo.md; commandline -f execute"
-        bind \cg "tmux-sessionizer ~/todo.md; commandline -f execute"
         bind \ch "tmux-sessionizer ~; commandline -f execute"
         bind \cs "tmux-sessionizer; commandline -f execute"
         bind \ct "tmux-sessionizer /tmp; commandline -f execute"

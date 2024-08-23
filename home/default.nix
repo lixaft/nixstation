@@ -8,7 +8,7 @@
 let
   inherit (config.lib.file) mkOutOfStoreSymlink;
 
-  root_dir = "${config.home.homeDirectory}/nixstation";
+  root_dir = "${config.home.homeDirectory}/.dots";
   scripts_dir = "${root_dir}/home/scripts";
 in
 {

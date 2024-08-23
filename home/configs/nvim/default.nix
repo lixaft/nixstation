@@ -6,7 +6,7 @@
 }:
 let
   inherit (config.lib.file) mkOutOfStoreSymlink;
-  nvim_dir = "${config.home.homeDirectory}/nixstation/home/configs/nvim";
+  nvim_dir = "${config.home.homeDirectory}/.dots/home/configs/nvim";
 
   jsonFormat = pkgs.formats.json { };
 in

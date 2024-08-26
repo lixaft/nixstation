@@ -70,6 +70,7 @@ in
       google-chrome
       gpick
       graphviz
+      hyprpicker
       iaito
       jq
       just
@@ -82,6 +83,7 @@ in
       nixfmt-rfc-style
       nodePackages.prettier
       nodejs
+      obs-studio
       parallel
       pavucontrol
       peek
@@ -108,6 +110,7 @@ in
       typos
       uv
       vcv-rack
+      wl-clipboard
       xclip
       xdg-utils
       zig
@@ -145,6 +148,7 @@ in
     ./configs/fish
     ./configs/fzf
     ./configs/git
+    ./configs/hypr
     ./configs/i3
     ./configs/lf
     ./configs/litecli
@@ -153,7 +157,10 @@ in
     ./configs/starship
     ./configs/theme
     ./configs/tmux
+    ./configs/waybar
+    ./configs/wofi
     ./configs/xdg
+    ./configs/rofi
   ];
 
   systemd.user.startServices = "sd-switch";

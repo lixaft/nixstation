@@ -1,0 +1,11 @@
+* {
+    background-color: #282c34;
+    foreground-color: #abb2bf;
+    border-color: #4b5263;
+    selected-background-color: #3e4451;
+    selected-foreground-color: #61afef;
+    font: "monospace 12";
+    border-radius: 0px;
+    padding: 2px;
+    border-width: 2px;
+}

@@ -2,6 +2,19 @@
   wallpaper = ./wall.png;
 
   colors = rec {
+    desktop = {
+      fg = {
+        left = "#7353F5";
+        middle = "#B83CAA";
+        right = "#FB2561";
+      };
+      bg = {
+        left = "#0F0721";
+        middle = "#1A071D";
+        right = "#240516";
+      };
+    };
+
     aquamarine = "#73daca";
     black = "#15161e";
     blue = "#7aa2f7";
@@ -36,7 +49,6 @@
       delete = "#914c54";
     };
 
-    diff = {
-    };
+    diff = { };
   };
 }

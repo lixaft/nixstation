@@ -1,0 +1,8 @@
+@import "style"
+
+configuration {
+    modi: "drun,run";
+    fullscreen: true;
+    show-icons: true;
+    font: "mono 14";
+}

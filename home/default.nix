@@ -150,13 +150,13 @@ in
     ./configs/litecli
     ./configs/nixpkgs
     ./configs/nvim
+    ./configs/rofi
     ./configs/starship
     ./configs/theme
     ./configs/tmux
     ./configs/waybar
     ./configs/wofi
     ./configs/xdg
-    ./configs/rofi
   ];
 
   systemd.user.startServices = "sd-switch";

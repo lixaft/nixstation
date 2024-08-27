@@ -66,6 +66,7 @@
 
   programs = {
     hyprland.enable = true;
+    virt-manager.enable = true;
   };
 
   xdg.portal = {

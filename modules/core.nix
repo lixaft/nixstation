@@ -3,11 +3,11 @@
   nix = {
     settings = {
       auto-optimise-store = true;
-      warn-dirty = false;
       experimental-features = [
         "flakes"
         "nix-command"
       ];
+      warn-dirty = false;
     };
     gc = {
       automatic = true;
@@ -46,9 +46,7 @@
       qemu = {
         swtpm.enable = true;
         ovmf.enable = true;
-        ovmf.packages = with pkgs; [
-          OVMFFull.fd
-        ];
+        ovmf.packages = with pkgs; [ OVMFFull.fd ];
       };
     };
 
@@ -62,7 +60,6 @@
   programs = {
     fish.enable = true;
     nix-ld.enable = true;
-    virt-manager.enable = true;
   };
 
   environment.systemPackages = with pkgs; [ virtiofsd ];

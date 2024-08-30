@@ -18,12 +18,6 @@
     };
 
     desktopEntries = {
-      pureref = {
-        name = "PureRef";
-        exec = "${pkgs.pureref}/bin/pureref";
-        terminal = false;
-        categories = [ "Application" ];
-      };
       filebot = {
         name = "FileBot";
         exec = "${pkgs.filebot}/bin/filebot";

@@ -29,6 +29,7 @@ in
 
       # LSP.
       bash-language-server
+      clang-tools
       cmake-language-server
       gopls
       lua-language-server

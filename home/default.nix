@@ -6,10 +6,7 @@
   ...
 }:
 let
-  inherit (config.lib.file) mkOutOfStoreSymlink;
-
   root_dir = "${config.home.homeDirectory}/.dots";
-  scripts_dir = "${root_dir}/home/scripts";
 in
 {
   home = rec {
@@ -19,9 +16,8 @@ in
 
     file = {
       ".background-image".source = theme.wallpaper;
-      ".local/bin/pydep".source = mkOutOfStoreSymlink scripts_dir + "/pydep";
-      ".local/bin/repdir".source = mkOutOfStoreSymlink scripts_dir + "/repdir";
-      ".local/bin/tmux-sessionizer".source = mkOutOfStoreSymlink scripts_dir + "/tmux-sessionizer";
+      ".local/bin/pydep".source = ./scripts/pydep;
+      ".local/bin/tmux-sessionizer".source = ./scripts/tmux-sessionizer;
     };
 
     shellAliases = rec {
@@ -91,7 +87,6 @@ in
       playerctl
       pre-commit
       protonvpn-gui
-      pureref
       pypy
       python3
       qbittorrent
@@ -110,6 +105,7 @@ in
       typos
       uv
       vcv-rack
+      wget
       wl-clipboard
       xclip
       xdg-utils

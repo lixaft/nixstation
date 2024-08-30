@@ -15,6 +15,7 @@
       init.defaultBranch = "main";
       merge.tool = "nvimdiff";
       pull.rebase = true;
+      rebase.autostash = true;
       safe.directory = "*";
     };
 

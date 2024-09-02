@@ -1,8 +1,65 @@
-@import "style"
-
 configuration {
-    modi: "drun,run";
-    fullscreen: true;
     show-icons: true;
-    font: "mono 14";
+    display-drun: "";
 }
+
+* {
+    color: white;
+    background-color: #00000000;
+}
+
+window {
+    location: north west;
+    background-color: #00000066;
+    x-offset: 12px;
+    y-offset: 12px;
+    width: 800px;
+    height: 800px;
+    border: 2px;
+    border-radius: 8px;
+    border-color: #FFFFFF04;
+}
+
+mainbox {
+    padding: 32px;
+}
+
+inputbar {
+    margin: 0px 200px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #FFFFFF04;
+}
+
+prompt {
+    padding: 0 12px 0 0;
+    color: #FB2561;
+}
+
+entry {
+    padding:0;
+    margin: 0;
+    placeholder: "Search";
+}
+
+listview {
+    margin: 32px 0px 0px 0px;
+    columns: 5;
+    fixed-columns: true;
+    fixed-height: true;
+    flow: horizontal;
+}
+
+element {
+    orientation: vertical;
+    padding: 16px;
+}
+
+element selected {
+    background-color: #FFFFFF08;
+}
+
+element-icon {
+    size: 32px;
+}
+

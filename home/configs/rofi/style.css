@@ -1,11 +1,51 @@
 * {
-    background-color: #282c34;
-    foreground-color: #abb2bf;
-    border-color: #4b5263;
-    selected-background-color: #3e4451;
-    selected-foreground-color: #61afef;
-    font: "monospace 12";
-    border-radius: 0px;
-    padding: 2px;
-    border-width: 2px;
+    color: white;
+    background: #000000AA;
+}
+
+window {
+    fullscreen: true;
+    transparency: background;
+}
+
+mainbox {
+    padding: 32px 256px;
+}
+
+inputbar {
+    margin: 0px 512px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.04);
+    children: [textbox-prompt, entry];
+}
+
+textbox-prompt {
+    content: "";
+    color: #FB2561;
+}
+
+prompt {
+    str: "test";
+}
+
+entry {
+    placeholder: "Search";
+}
+
+listview {
+    margin-top: 100px;
+    fixed-columns: true;
+    columns: 4;
+    spacing: 16px;
+}
+
+element {
+    border-radius: 8px;
+    padding: 20px;
+    orientation: vertical;
+}
+
+element-icon {
+    width: 64px;
 }

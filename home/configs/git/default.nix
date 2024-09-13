@@ -32,6 +32,7 @@
       quarante-neuf-trois = "push --force origin HEAD";
       congrat = "blame";
       random = ''"!git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"'';
+      contrib = ''!git log --pretty="%an" | sort | uniq -c | sort -hr'';
     };
 
     delta = {

@@ -56,6 +56,7 @@ in
       fd
       feh
       ffmpeg
+      figma-linux
       filebot
       flameshot
       gcc

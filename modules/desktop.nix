@@ -26,7 +26,7 @@
 
   services = {
     displayManager = {
-      defaultSession = "none+i3";
+      defaultSession = "Hyprland";
       sddm = {
         enable = true;
         package = pkgs.kdePackages.sddm;

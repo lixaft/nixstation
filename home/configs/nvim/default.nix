@@ -35,6 +35,7 @@ in
       lua-language-server
       nodePackages.typescript-language-server
       pyright
+      basedpyright
       python3Packages.jedi-language-server
       ruff
       rust-analyzer
@@ -85,6 +86,7 @@ in
       oil-nvim
       render-markdown
       telescope-nvim
+      tokyonight-nvim
       treesj
       undotree
       vim-better-whitespace

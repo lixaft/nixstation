@@ -86,7 +86,7 @@ lspconfig.ruff.setup({
   }),
   on_attach = on_attach,
 })
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   capabilities = build_capabilities(),
   on_attach = on_attach,
 })
@@ -100,7 +100,6 @@ lspconfig.lua_ls.setup({
     },
   },
 })
-
 lspconfig.clangd.setup({
   capabilities = build_capabilities({
     offsetEncoding = { "utf-16" },

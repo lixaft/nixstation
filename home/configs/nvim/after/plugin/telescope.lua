@@ -1,6 +1,5 @@
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
-local c = require("theme").colors
 
 telescope.setup({
   defaults = {
@@ -50,3 +49,4 @@ vim.keymap.set("n", "<leader>sr", builtin.registers)
 vim.api.nvim_create_user_command("Hi", builtin.highlights, {})
 vim.api.nvim_create_user_command("Man", builtin.man_pages, {})
 vim.api.nvim_create_user_command("Reg", builtin.registers, {})
+vim.api.nvim_create_user_command("Cmd", builtin.commands, {})

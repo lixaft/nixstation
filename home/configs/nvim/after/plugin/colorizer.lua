@@ -2,8 +2,8 @@ local colorizer = require("colorizer")
 
 colorizer.setup({
   filetypes = {
-    "*",
-    css = { css = true},
+    [1] = "*",
+    css = { css = true },
   },
   user_default_options = {
     RGB = false,

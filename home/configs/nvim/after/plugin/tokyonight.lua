@@ -24,31 +24,19 @@ tokyonight.setup({
   end,
 
   on_highlights = function(hl, colors)
-    hl.LineNr = { fg = colors.dark3 }
-    hl.VirtColumn = { fg = colors.dark3 }
+    hl.LineNr = { fg = colors.fg_gutter }
+    hl.LineNrAbove = { link = "LineNr" }
+    hl.LineNrBelow = { link = "LineNr" }
 
-    hl.DiagnosticVirtualTextError = { fg = colors.red1 }
-    hl.DiagnosticVirtualTextHint = { fg = colors.teal }
-    hl.DiagnosticVirtualTextInfo = { fg = colors.blue2 }
-    hl.DiagnosticVirtualTextWarn = { fg = colors.yellow }
-
-    hl.IlluminatedWordRead = { underline = true }
-    hl.IlluminatedWordText = { underline = true }
-    hl.IlluminatedWordWrite = { underline = true }
-
-    hl.CopilotSuggestion = { fg = colors.blue0 }
     hl.ExtraWhitespace = { bg = colors.red }
 
+    hl.VirtColumn = { fg = colors.fg_gutter }
+
     hl.TreesitterContext = {}
-    hl.TreesitterContextSeparator = { fg = colors.dark3 }
+    hl.TreesitterContextSeparator = { fg = colors.fg_gutter }
 
     hl.Folded = { bg = "none" }
     hl.UfoFoldedBg = { bg = "none" }
-
-    hl.DapBreakpoint = { fg = colors.red }
-    hl.DapLogPoint = { fg = colors.purple }
-    hl.DapStopped = { fg = colors.yellow }
-    hl.DapUIBreakpointsLine = { bg = colors.yellow }
 
     hl["@string.documentation"] = { fg = colors.comment }
   end,

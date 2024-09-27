@@ -1,7 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 local context = require("treesitter-context")
 local tsj = require("treesj")
-local c = require("theme").colors
 
 configs.setup({
   highlight = {
